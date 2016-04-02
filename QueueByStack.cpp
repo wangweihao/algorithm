@@ -51,6 +51,10 @@ CQueue<T>::deleteHead() {
         }
     }
 
+
+    if (stack2.size() == 0) {
+        return -1;
+    }
     T& ret = stack2.top();
     stack2.pop();
 
@@ -65,6 +69,7 @@ int main() {
     queue.appendTail(3);
     queue.appendTail(4);
     queue.appendTail(5);
+    std::cout << queue.deleteHead() << std::endl;
     std::cout << queue.deleteHead() << std::endl;
     std::cout << queue.deleteHead() << std::endl;
     std::cout << queue.deleteHead() << std::endl;
